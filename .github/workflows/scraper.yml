@@ -27,15 +27,5 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
 
-
-      - name: Apache JMeter
-         # You may pin to the exact commit or the version.
-         # uses: rbhadti94/apache-jmeter-action@8441308b8d05c3acc6e61f11149b4e1d3b3ccd98
-        uses: rbhadti94/apache-jmeter-action@v0.5.0
-        with:
-         # The path to the JMX test file
-         testFilePath: ./
-         outputReportsFolder:  reports/
-         plugins: jpgc-dummy
-          
-          
+      - name: run jmeter on github action
+        uses: sebiboga/run-jmeter-github-action@v0.0.3
